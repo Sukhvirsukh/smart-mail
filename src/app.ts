@@ -29,6 +29,11 @@ server.setConfig((app) => {
 // Build and start the server
 let app = server.build();
 
+app.get('/', (req, res) => {
+  // Send a simple HTML response to the browser
+  res.send('<h1>App is Working!</h1>');
+});
+
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
