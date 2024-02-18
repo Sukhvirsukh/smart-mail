@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "start": "pm2 start --max-old-space-size=4096 dist/src/app.js --name myApp",
+    "start": "pm2 start ecosystem.config.js",
     "deploy": "npm run build && npm start"
   },
   "keywords": [],
